@@ -2,6 +2,7 @@
 
 A tool to help with finding FakeDeveloper. <br>
 **This tool can not tell if someone is a fake developer or not it only helps with analyzing.**
+This tool is still in the beta version since there are many things that can get added.
 
 ## Installation & Setup
 ```bash
