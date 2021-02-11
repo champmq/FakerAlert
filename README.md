@@ -12,7 +12,7 @@ A tool to help with finding FakeDeveloper. <br>
 ```
 
 If you are going to use the tool often you should create a Github App. <br>
-Then create a client secret which you can add in `secrets.json`
+Then create a client secret which you can add in `settings.json`
 
 ## Usage
 <br>
