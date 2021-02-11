@@ -20,3 +20,4 @@ output["user_information"] = user_infos
 output["repo_information"] = repo_infos
 
 json.dump(output, open("targets/" + name + ".json", "w+"), indent=4)
+print(f"Saved at targets/{name}")
