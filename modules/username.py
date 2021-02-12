@@ -9,7 +9,8 @@ class Username:
 
     def getGeneralInfos(self):
         req = requests.get(f"https://api.github.com/users/{self.username}",
-                           headers={"Authorization":self.token})
+                           headers={"Authorization": self.token})
+        print(req.json())
         infos = req.json()
         if "message" in infos:
             if infos["message"] == "Not Found":
@@ -35,7 +36,7 @@ class Username:
 
     def getRepoInfos(self):
         req = requests.get(f"https://api.github.com/users/{self.username}/repos",
-                           headers={"Authorization":self.token})
+                           headers={"Authorization": self.token})
         info = req.json()
         output_temp = []
         if "message" in info:

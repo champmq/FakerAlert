@@ -6,7 +6,7 @@ This tool is still in the beta version since there are many things that can get 
 
 ## Installation & Setup
 ```bash
- $ pip3 install requests
+ $ pip3 install requests flask
  $ git clone https://github.com/champmq/FakerAlert.git
  $ cd FakerAlert
  $ python3 FakerAlert.py
@@ -16,9 +16,13 @@ If you are going to use the tool often you should create a Github App. <br>
 Then create a client secret which you can add in `settings.json`
 
 ## Usage
+You can use it as a RestAPI or as a CLI Tool
 <br>
-
+CLI: <br>
 ![](images/example_use.png)
+<br><br>
+RestAPI (Change the port in `settings.json`):
+`http://127.0.0.1:1234/name/repo_name/language`
 
 ## Output
 **How to read the output**
@@ -43,7 +47,7 @@ Negative:
 *This list can get updated every time.*
 
 
-JSON Output: https://pastebin.com/Uz2ciSmJ
+JSON Output: https://pastebin.com/4QYJBdb9
 
 ## Questions etc
 You can DM me on Discord: champmq#5745 or on [Instagram](https://www.instagram.com/champmq/).

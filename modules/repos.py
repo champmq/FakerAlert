@@ -8,6 +8,7 @@ class Repos:
         self.repo_name = repo_name
         self.language = language
         self.username = username
+        self.token = json.load(open("./settings.json", "r"))["token"]
 
     def findRepo(self):
         temp_output = []
@@ -35,7 +36,8 @@ class Repos:
                 "url": repo["url"],
                 "same_name": False,
                 "same_language": False,
-                "same_owner": False
+                "same_owner": False,
+                "forked": False
             }
             if repo["name"] == self.repo_name:
                 output["same_name"] = True
@@ -44,6 +46,10 @@ class Repos:
                     output["same_language"] = True
             if repo["owner"] == self.username:
                 output["same_owner"] = True
+            req = requests.get(f"https://api.github.com/repos/{repo['owner']}/{repo['name']}",
+                               headers={"Authorization": self.token}).json()
+            if req["fork"] is True:
+                output["forked"] = True
             temp_output.append(output)
         for t in temp_output:
             if t["same_language"] is True:
@@ -57,7 +63,7 @@ class Repos:
         for repo in self.repo_list:
             true_counter = 0
             for t in repo:
-                if t != "repo_name":
+                if t != "forked":
                     if repo[t] is True:
                         true_counter += 1
             if true_counter == 3:
