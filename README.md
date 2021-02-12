@@ -21,7 +21,7 @@ You can use it as a RestAPI or as a CLI Tool
 CLI: <br>
 ![](images/example_use.png)
 <br><br>
-RestAPI (Change the port in `settings.json`):
+RestAPI (Change the port in `settings.json`): <br>
 `http://127.0.0.1:1234/name/repo_name/language`
 
 ## Output
