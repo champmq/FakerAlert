@@ -9,7 +9,10 @@ This tool is still in the beta version since there are many things that can get 
  $ pip3 install requests flask
  $ git clone https://github.com/champmq/FakerAlert.git
  $ cd FakerAlert
+ # For CLI:
  $ python3 FakerAlert.py
+ # For RestAPI:
+ $ python3 FakerRest.py
 ```
 
 If you are going to use the tool often you should create a Github App. <br>
