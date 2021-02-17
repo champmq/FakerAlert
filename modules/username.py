@@ -10,7 +10,6 @@ class Username:
     def getGeneralInfos(self):
         req = requests.get(f"https://api.github.com/users/{self.username}",
                            headers={"Authorization": self.token})
-        print(req.json())
         infos = req.json()
         if "message" in infos:
             if infos["message"] == "Not Found":
